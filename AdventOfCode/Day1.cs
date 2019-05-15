@@ -1,17 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
 
 namespace AdventOfCode
 {
-    public class Day1 : IDay<int[]>
+    public class Day1 : Day<int[]>
     {
-        public string RunPartA(int[] input)
+        public override int[] ParseInput(string input)
+        {
+            return input.Split('\n').Select(int.Parse).ToArray();
+        }
+
+        public override string RunPartA(int[] input)
         {
             throw new NotImplementedException();
         }
 
-        public string RunPartB(int[] input)
+        public override string RunPartB(int[] input)
         {
             throw new NotImplementedException();
         }

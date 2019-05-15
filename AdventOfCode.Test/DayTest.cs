@@ -7,7 +7,7 @@ using Xunit;
 namespace AdventOfCode.Test
 {
     public abstract class DayTest<TDay, TInput, TDayTestData>
-        where TDay : IDay<TInput>, new()
+        where TDay : Day<TInput>, new()
         where TDayTestData : DayTestData<TDay, TInput>, new()
     {
         public static IEnumerable<object[]> PartAData => new TDayTestData().PartA.Select(o => new object[] { o.input, o.expected });

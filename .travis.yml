@@ -1,0 +1,14 @@
+notifications:
+  email: false
+
+language: csharp
+mono: none
+dotnet: 2.2
+sudo: required
+dist: xenial
+
+install:
+  - dotnet restore
+
+script:
+  - dotnet build
